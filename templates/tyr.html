@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>.card {
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* Text color */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+}
+
+.card-image {
+    flex: 1;
+}
+
+.card-image img {
+    width: 30vw;
+    height: 63vh;
+    display: block;
+}
+
+.card-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-author,
+.book-votes,
+.book-rating {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+</style>
+<body>
+    <div class="big_container">
+        <div class="book_50">
+            <div class="books" style="display: flex; flex-direction: column; align-items: center;">
+                {% for i in range(book_name|length) %}
+                <div class="card" style="width: 70vw;">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ image[i] }}" alt="{{ book_name[i] }}">
+                        </div>
+                        <div class="card-details">
+                            <p class="book-title">Title: {{ book_name[i] }}</p>
+                            <p class="book-author">Author: {{ author[i] }}</p>
+                            <p class="book-votes">Votes:  {{ votes[i] }}</p>
+                            <p class="book-rating">Rating: {{ rating[i] }}</p>
+                            <p class="book-rating">Publisher: {{ publisher[i] }}</p>
+                            <p class="book-rating">Year-Of-Publication: {{ yop[i] }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

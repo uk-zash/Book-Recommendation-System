@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hive</title>
+    <link rel="stylesheet" href="../public/style/home.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        section::after {
+    content: "";
+    background-image: url("../public/image/book8.jpg");
+    background-size: cover;
+    background-position:initial;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+body{
+    background-color: black;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../public/image/book7.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
+      
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Kritika</a>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                    <ul class="sub-menu">
+                        <li><a href="/">Search</a></li>
+                        <li><a href="#browse">Browse</a></li>
+                    </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="searching" id="search">
+        <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae exercitationem quasi ipsa expedita et nisi maxime sequi voluptas necessitatibus quod, error distinctio, nulla laudantium. Cumque error laboriosam ad voluptatibus porro!</p>
+        <form action="/recommend_books" method="post">
+            <input type="text" placeholder="Enter Book Name..." name="user_input"/> 
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    </section>
+    
+
+    <div class="heading" id="browse">
+        <h1>Top 50 Books</h1>
+    </div>
+
+
+<div class="big_container" >
+    <div class="book_50">
+        <div class="books">
+            {% for i in range(book_name|length) %}
+            <div class="card">
+                <div class="card-body" style="color: white;">
+                    <img class="card-img-top" src="{{ image[i] }}">
+                    <div class="content" style="padding-top: 1rem;">
+                    <p class="text-white" style="    padding-bottom: 11px;
+                    font-size: xx-large;">{{ book_name[i] }}</p>
+                    <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
+                    <h4 class="text-white">Votes - {{ votes[i] }}</h4>
+                    <h4 class="text-white">Rating - {{ rating[i] }}</h4>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+    
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; Kritika 2024 </p>
+    </footer>
+    
+</body>
+</html>
