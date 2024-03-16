@@ -42,7 +42,7 @@
     background-color: #c02ed2; /* Change background color */
 }
 body{
-    background-color: black;
+    background-color: #271e1e;
 }
 
 /* body {
@@ -59,7 +59,7 @@ body{
 <body >
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">BookHive</a>
+            <a href="#" class="logo">Kritika</a>
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                     <ul class="sub-menu">
@@ -70,15 +70,15 @@ body{
         </div>
     </nav>
     
-    <form action="/recommend_books" method="post">
+    <!-- <form action="/recommend_books" method="post">
         <div class="form" style="padding: 4rem 4rem;">
         <input type="text" placeholder="Enter Book Name..." name="user_input"/> 
         <button type="submit">Search</button>
     </div>
-    </form>
+    </form> -->
 
 
-    <h1 style="color: white;text-align: center; padding-bottom: 5rem;">Your Book</h1>
+    <h1 style="color: white;text-align: center;    padding: 3rem 0rem;">Your Book</h1>
     <div class="container" style=" margin: 0rem 5rem;
     ">
         <div class="row";>
@@ -89,10 +89,10 @@ body{
                     <div class="card"  >
                         <div class="card-body" style="display: flex; gap: 5rem;">
                             <img class="card-img-top" style="width: 100%; height: auto;height: 84vh; width: 34vw;" src="{{ data[0][2] }}">
-                            <div style="padding-top: 10rem; font-size: 2em; "><p style="padding-bottom: 1rem;" class="text-white">Name: {{ data[0][0] }}</p>
-                            <h4 style="padding-bottom: 1rem;" class="text-white">Author: {{ data[0][1] }}</h4>
-                            <h4 style="padding-bottom: 1rem;" class="text-white">Publisher: {{ data[0][4] }}</h4>
-                            <h4 style="padding-bottom: 1rem;" class="text-white">Year-Of-Publication: {{ data[0][3] }}</h4>
+                            <div style="padding-top: 10rem; font-size: 2em; "><h3 style="padding-bottom: 1rem;" class="text-white">Name:   {{ data[0][0] }}</h3>
+                            <h5 style="padding-bottom: 1rem;" class="text-white">Author:   {{ data[0][1] }}</h5>
+                            <h5 style="padding-bottom: 1rem;" class="text-white">Publisher:   {{ data[0][4] }}</h5>
+                            <h5 style="padding-bottom: 1rem;" class="text-white">Year-Of-Publication:   {{ data[0][3] }}</h5>
                         </div>
                         </div>
                     </div>
