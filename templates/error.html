@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="../public/style/home.css">
+    <!-- Add any necessary styles here -->
+</head>
+<body style="background-color: #302525;">
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Kritika</a>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                    <ul class="sub-menu">
+                        <li><a href="/">Search</a></li>
+                        <li><a href="#browse">Browse</a></li>
+                    </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center; padding: 2rem 0rem; color: white;">Sorry! No book found</h1>
+    <h3 style="text-align: center; color: white;">You can look some of the top Rated Books</h3>
+    <div class="big_container" >
+        <div class="book_50">
+            <div class="books">
+                {% for i in range(book_name|length) %}
+                <div class="card">
+                    <div class="card-body" style="color: white;">
+                        <img class="card-img-top" src="{{ image[i] }}">
+                        <div class="content" style="padding-top: 1rem;">
+                        <p class="text-white" style="    padding-bottom: 11px;
+                        font-size: xx-large;">{{ book_name[i] }}</p>
+                        <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
+                        <h4 class="text-white">Votes - {{ votes[i] }}</h4>
+                        <h4 class="text-white">Rating - {{ rating[i] }}</h4>
+                    </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
