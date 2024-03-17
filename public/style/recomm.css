@@ -71,6 +71,7 @@ body{
 .col-md-67 .card-body a img{
     width: 21vw;
     height: 64vh;
+    border-radius: 25px;
 }
 
 .col-md-67 .card-body a p{
