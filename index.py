@@ -22,6 +22,17 @@ def index():
                         #    publisher=list(popular_df["Publisher"].values),
                         #    yop = list(popular_df["Year-Of-Publication"].values)           
                                                )                                           
+@app.route('/browse')
+def browse():
+    return render_template("browse.html",
+                           book_name = list(popular_df['Book-Title'].values),
+                           author=list(popular_df['Book-Author'].values),
+                           image=list(popular_df['Image-URL-L'].values),
+                           votes=list(popular_df['num_ratings'].values),
+                           rating=list(popular_df['avg_rating'].values),
+                           publisher=list(popular_df["Publisher"].values),
+                           yop = list(popular_df["Year-Of-Publication"].values)           
+                                               )                                           
 
 @app.route('/recommend')
 def recommend_ui():

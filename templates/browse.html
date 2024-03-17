@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
-        section::after {
+        /* section::after {
     content: "";
     background-image: url("../public/image/book8.jpg");
     background-size: cover;
@@ -21,7 +21,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-}
+} */
 body{
     background-color: #271e1e;
 }
@@ -48,13 +48,13 @@ body{
                 <li><a href="/">Home</a></li>
                     <ul class="sub-menu">
                         <li><a href="/">Search</a></li>
-                        <li><a href="/browse">Browse</a></li>
+                        <li><a href="#browse">Browse</a></li>
                     </ul>
             </ul>
         </div>
     </nav>
 
-    <section class="searching" id="search">
+    <!-- <section class="searching" id="search">
         <div class="container">
         <p>Welcome to <b>Kritika</b>, your ultimate destination for personalized book recommendations. Let us guide you to your next literary adventure with handpicked reads tailored just for you. Start exploring today!</p>
         <form action="/recommend_books" method="post">
@@ -62,10 +62,10 @@ body{
             <button type="submit">Search</button>
         </form>
     </div>
-    </section>
+    </section> -->
     
 
-    <div class="heading" id="browse">
+    <div class="heading" id="browse" style=" padding-top: 3rem;">
         <h1 style="color: white;">Some Top Rated Books</h1>
     </div>
 
@@ -73,7 +73,7 @@ body{
 <div class="big_container" >
     <div class="book_50">
         <div class="books">
-            {% for i in range(12) %}
+            {% for i in range(book_name|length) %}
             <div class="card">
                 <div class="card-body" style="color: white; width: 22vw;">
                     <img class="card-img-top" src="{{ image[i] }}">
@@ -81,6 +81,8 @@ body{
                     <p class="text-white" style="    padding-bottom: 11px;
                     font-size: xx-large;">{{ book_name[i] }}</p>
                     <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
+                    <h4 class="text-white" style="padding-bottom: 8px;">Publisher: {{ publisher[i] }}</h4>
+                    <h4 class="text-white" style="padding-bottom: 8px;">Year-Of-Publication: {{ yop[i] }}</h4>
                     <!-- <h4 class="text-white">Votes - {{ votes[i] }}</h4> -->
                     <h4 class="text-white">Rating - {{ rating[i] }}</h4>
                 </div>

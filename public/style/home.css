@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Goudy+Bookletter+1911&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Goudy Bookletter 1911", serif;
 }
 nav {
     color: white;
