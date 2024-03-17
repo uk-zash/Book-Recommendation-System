@@ -76,10 +76,12 @@ body{
             {% for i in range(book_name|length) %}
             <div class="card">
                 <div class="card-body" style="color: white; width: 22vw;">
+                    <a href="/recommend/{{ book_name[i] }}" class="book-link" style="color: white; text-decoration: none;">
                     <img class="card-img-top" src="{{ image[i] }}">
                     <div class="content" style="padding-top: 1rem;">
                     <p class="text-white" style="    padding-bottom: 11px;
                     font-size: xx-large;">{{ book_name[i] }}</p>
+                    </a>
                     <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
                     <h4 class="text-white" style="padding-bottom: 8px;">Publisher: {{ publisher[i] }}</h4>
                     <h4 class="text-white" style="padding-bottom: 8px;">Year-Of-Publication: {{ yop[i] }}</h4>

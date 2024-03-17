@@ -67,6 +67,34 @@ def recommend():
                            votes=list(popular_df['num_ratings'].values),
                            rating=list(popular_df['avg_rating'].values)
                            )
+def get_recommendations_for_book(selected_book):
+
+        index = np.where(pt.index == selected_book)[0][0]
+        similar_items = sorted(list(enumerate(similarity_scores[index])), key=lambda x: x[1], reverse=True)[0:7]
+
+        data = []
+        for i in similar_items:
+            item = []
+            temp_df = books[books['Book-Title'] == pt.index[i[0]]]
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Title'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Author'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Image-URL-L'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Year-Of-Publication'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Publisher'].values))
+
+            data.append(item)
+        print(data)
+
+        return data
+  
+
+@app.route('/recommend/<book_name>')
+def get_recommendations(book_name):
+    # Get recommendations based on the selected book index
+    # selected_book = books.loc[book_name]  # Assuming 'books' is your DataFrame
+    recommendations = get_recommendations_for_book(book_name)
+    return render_template('recommend.html', data=recommendations)
+
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error.html',

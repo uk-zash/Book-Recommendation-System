@@ -110,11 +110,13 @@ body{
                         {% for i in data[1:] %}
                         <div class="col-md-6">
                             <div class="card" >
-                                <div class="card-body">
+                                <div class="card-body" style="width: 22vw;">
+                                    <a href="/recommend/{{ i[0] }}" class="book-link" style="color: white; text-decoration: none;">
                                     <img class="card-img-top" style="width: 21vw;
                                     height: 64vh;" src="{{ i[2] }}">
                                    <div style="padding-top: 1rem;"> <p style="    padding-bottom: 0.5rem;" class="text-white">{{ i[0] }}</p>
                                     <h4 class="text-white">{{ i[1] }}</h4>
+                                    </a>
                                 </div>
                                 </div>
                             </div>
