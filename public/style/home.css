@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Goudy+Bookletter+1911&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -54,6 +55,9 @@ nav .menu .sub-menu{
     align-items: center;
 }
 
+
+
+
 section::before {
     content: "";
     background-image: url("/image/img1.jpg");
@@ -79,8 +83,16 @@ section .container{
     gap: 5rem;
     color: white;
     font-size: 1.3em;
-    margin: 17rem 7rem 0rem 13rem;
+    margin: 17rem 9rem 0rem 9rem;
 }
+
+/* @media only screen and(max-width: 700px){
+    section .container{
+        margin: 12rem 2rem 0rem 2rem;
+    }
+} */
+
+
 section .container1{
     display: flex;
     justify-content: center;
@@ -93,12 +105,24 @@ section .container1{
 }
 section .container p{
     font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 section .container1 p{
     font-size: 1.3em;
     padding-bottom: 4rem;
+    
 }
+@media only screen and (max-width: 800px) {
+    section .container {
+        margin: 12rem 2rem 0rem 2rem;
+    }
+
+    section .container p{
+        font-size: 1.1em;
+    }
+}
+
 section input[type="text"] {
     outline: none;
     padding: 10px; /* Adjust padding as needed */
@@ -125,6 +149,22 @@ section  button[type="submit"]:hover {
     background-color: #c02ed2; /* Change background color */
 }
 
+@media only screen and (max-width: 800px) {
+    section .container1 {
+        margin: 9rem 2rem 0rem 2rem;
+    }
+
+    section .container1 p{
+        font-size: 1.1em;
+    }
+    section button{
+        margin-top: 1rem;
+    }
+    section input[type="text"]{
+        width: 250px;
+    }
+}
+
 .book_50{
     margin: 2rem 2rem;
 }
@@ -146,14 +186,14 @@ section  button[type="submit"]:hover {
 }
 
 .book_50 .books .card img{
-    width: 22vw;
+    width: 337;
     height: 70vh;
     border-radius: 25px;
 
 }
 
 .card .card-body{
-    color: black; width: 22vw;
+    color: black; width: 330px;
 }
 
 .card .card-body a{
@@ -181,4 +221,15 @@ margin: 2rem
 footer{
     background-color: #333; color: white; text-align: center; padding: 20px;
     bottom: 0;
+}
+
+
+@media only screen and (max-width:500px){
+    .card .card-body{
+        width: 100%;
+    }
+    .book_50 .books .card img{
+        width: 100%;
+        height: auto;
+    }
 }

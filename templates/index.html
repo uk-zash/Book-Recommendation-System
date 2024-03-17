@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../public/style/header.css">
     <style>
         section::after {
     content: "";
@@ -45,19 +46,48 @@ body{
     </style>
 </head>
 <body>
-
+<!-- 
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">BookHive</a>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
             <ul class="menu">
                 <li><a href="/">Home</a></li>
-                    <ul class="sub-menu">
-                        <li><a href="/search">Search</a></li>
-                        <li><a href="/browse">Browse</a></li>
-                    </ul>
+                <ul class="sub-menu">
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/browse">Browse</a></li>
+                </ul>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <div class="container2">
+        <div class="logo">BookHive</div>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a class="home" href="/">Home</a></li>
+          
+          <li class="dropdown">
+            <a href="/search" >Search</a>
+            <li><a href="/browse">Browse</a></li>
+          </li>
+          <li class="dropdown">
+            <a href="/aboutus">About</a>
+          </li>
+        </ul>
+      </div>
+    
+    
+    
 
     <section class="searching" id="search">
         <div class="container">
@@ -105,5 +135,6 @@ class="link-click">
         <p>&copy; BookHive 2024 </p>
     </footer>
     
+    <script src="../public/js/header.js"></script>
 </body>
 </html>

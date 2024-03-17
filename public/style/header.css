@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Goudy+Bookletter+1911&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Goudy Bookletter 1911", serif;
+  padding: 0;
+  box-sizing: border-box; /* Added box-sizing for better sizing control */
+}
+
+
+.dropdown {
+  position: relative;
+
+}
+
+.container2 .logo{
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+.dropdown-content {
+  display: none; /*none*/
+  position: absolute;
+  top:29px;
+  z-index: 100;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 27px; /* Adjusted padding for better spacing */
+  /* width: 18rem; */
+  width: 42rem;
+  gap: 27px;
+  /* transition: all 2s ease-in-out; */
+  /* display: flex; Add display: flex */
+  flex-wrap: wrap;
+  left: -226%;
+}
+.dropdown-content .links a:hover{
+  border-bottom: 1px solid black;
+
+}
+.dropdown-content .dropdown-main{
+  display: flex;
+    justify-content: space-between;
+
+}
+/* .dropdown-content .padd{
+  padding-right: 4rem;
+} */
+
+.dropdown-content a {
+  display: block;
+  padding: 20px 0; /* Adjusted padding for better spacing */
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+
+}
+.conntainer2 .nav-links{
+    font-size: larger;
+    gap: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2 {
+  display: flex;
+  box-shadow: 8px 15px 8px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  height: 80px;
+  background-color: #583d67;
+  /* position: sticky; */
+  top: 0;
+  z-index: 10;
+}
+
+.container2 ul {
+  display: flex;
+  gap: 0rem;
+  padding-right: 0rem;
+}
+
+.container2 ul li {
+  list-style-type: none;
+}
+
+.container2 ul li a {
+    display: inline-block;
+
+  color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
+/* .container2 ul li a:hover{
+  background-color: #e0dfdf;
+ 
+} */
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+@media only screen and (max-width: 713px){
+  .dropdown-content{
+
+  flex-direction: column;
+    align-items: center;
+    width: 100%;
+    left: 1%;
+  }
+  .dropdown-content .padd{
+    padding-right: 0;
+
+  }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container2 ul {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    padding-right: 2rem;
+  }
+
+  .container2.active ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #7e578b;
+    position: absolute;
+    top: 80px;
+    z-index: 100;
+
+    left: 0;
+    width: 100%;
+    transition: left 0.3s ease; /* Added transition for smooth animation */
+  }
+
+  .container2.active ul li {
+    list-style-type: none;
+    padding: 15px;
+    text-align: center; /* Centered the text in the mobile menu */
+  }
+  .dropdown-content{
+    flex-wrap: wrap;
+    top: 42px;
+    left: 3%;
+  }
+  .dropdown-content .drop-down-cont1 .links{
+    align-items: start;
+  }
+}
+@media only screen and (max-width: 714px){
+  .dropdown-content{
+    flex-wrap: wrap;
+    top: 42px;
+    left: 1%;
+  }
+}
+@media only screen and (max-width: 500px){
+  .dropdown-content{
+    left: 2%;
+  }
+}
+
+@media only screen and (max-width: 753px){
+  .container1{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1199px){
+  .container2 img{
+    width: 17%;
+  }
+}
+@media only screen and (max-width: 1062px){
+  .container2 img{
+    width: 19%;
+  }
+}
+@media only screen and (max-width: 855px){
+  .container2 img{
+    width: 23%;
+  }
+}
+@media only screen and (max-width: 750px){
+  .container2 img{
+    width: 26%;
+  }
+}
+@media only screen and (max-width: 660px){
+  .container2 img{
+    width: 31%;
+  }
+  .container2{
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 570px){
+  .container2 img{
+    width: 36%;
+  }
+  .conntainer2{
+    padding-left: 0;
+  }
+
+}
+@media only screen and (max-width: 470px){
+  .container2 img{
+    width: 44%;
+  }
+  .container2{
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 420px){
+  .container2 img{
+    width: 50%;
+  }
+  .container2{
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 365px){
+  .container2 img{
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 315px){
+  .container2 img{
+    width: 47%;
+  }
+}

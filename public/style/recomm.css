@@ -42,7 +42,7 @@ body{
 }
 
 .container .row .col-md-6 .card1 .card-body .div{
-    padding-top: 3rem; font-size: 2em;
+    padding-top: 3rem; font-size: 150%;
 }
 .container .row .col-md-6 .card1 .card-body .div h3,h5{
     padding-bottom: 1rem;    
@@ -76,4 +76,43 @@ body{
 
 .col-md-67 .card-body a p{
     font-size: x-large ;padding-bottom: 0.5rem;
+}
+
+
+
+@media only screen and (max-width:800px){
+    .container .row .col-md-6 .card1 .card-body .div{
+        padding-top: 0rem;
+        font-size: 133%;
+        margin: 2rem;
+    }
+    .container .row .col-md-6 .card1 .card-body .card-img-top{
+        width: 100%;
+        height: auto;
+    }
+    .container .row .col-md-6 .card1 .card-body{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .row .col-md-6 .card1{
+        padding-right: 0rem;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .col-md-67 .card-body{
+        width: 100%;
+    }
+    .col-md-67 .card-body a img{
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+    
 }

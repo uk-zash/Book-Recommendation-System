@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Hive</title>
     <link rel="stylesheet" href="../public/style/home.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style/header.css">
+
+
     <style>
         /* section::after {
     content: "";
@@ -23,7 +22,7 @@
     z-index: -1;
 } */
 body{
-    background-color: #271e1e;
+    background-color: floralwhite;
 }
 
 /* body {
@@ -40,19 +39,26 @@ body{
     </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">BookHive</a>
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                    <ul class="sub-menu">
-                        <li><a href="/search">Search</a></li>
-                        <li><a href="/browse">Browse</a></li>
-                    </ul>
-            </ul>
+    <div class="container2">
+        <div class="logo">BookHive</div>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </nav>
+        <ul class="nav-links">
+          <li><a class="home" href="/">Home</a></li>
+          
+          <li class="dropdown">
+            <a href="/search" >Search</a>
+            <li><a href="/browse">Browse</a></li>
+          </li>
+          <li class="dropdown">
+            <a href="/aboutus">About</a>
+          </li>
+        </ul>
+      </div>
+    
 
     <!-- <section class="searching" id="search">
         <div class="container">
@@ -65,8 +71,8 @@ body{
     </section> -->
     
 
-    <div class="heading" id="browse" style=" padding-top: 3rem;">
-        <h1 style="color: white;">Some Top Rated Books</h1>
+    <div class="heading" id="browse" style="padding-top: 2rem;">
+        <h1>Some Top Rated Books</h1>
     </div>
 
 
@@ -75,16 +81,15 @@ body{
         <div class="books">
             {% for i in range(book_name|length) %}
             <div class="card">
-                <div class="card-body" style="color: white; width: 22vw;">
-                    <a href="/recommend/{{ book_name[i] }}" class="book-link" style="color: white; text-decoration: none;">
+                <div class="card-body">
+                    <a href="/recommend/{{ book_name[i] }}" class="book-link" >
                     <img class="card-img-top" src="{{ image[i] }}">
-                    <div class="content" style="padding-top: 1rem;">
-                    <p class="text-white" style="    padding-bottom: 11px;
-                    font-size: xx-large;">{{ book_name[i] }}</p>
+                    <div class="content">
+                    <p class="text-white">{{ book_name[i] }}</p>
                     </a>
-                    <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
-                    <h4 class="text-white" style="padding-bottom: 8px;">Publisher: {{ publisher[i] }}</h4>
-                    <h4 class="text-white" style="padding-bottom: 8px;">Year-Of-Publication: {{ yop[i] }}</h4>
+                    <h4 class="text-white" >Author: {{ author[i] }}</h4>
+                    <h4 class="text-white">Publisher: {{ publisher[i] }}</h4>
+                    <h4 class="text-white">Year-Of-Publication: {{ yop[i] }}</h4>
                     <!-- <h4 class="text-white">Votes - {{ votes[i] }}</h4> -->
                     <h4 class="text-white">Rating - {{ rating[i] }}</h4>
                 </div>
@@ -95,9 +100,11 @@ body{
     </div>
 </div>
     
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <footer>
         <p>&copy; BookHive 2024 </p>
     </footer>
+
+    <script src="../public/js/header.js"></script>
     
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error</title>
     <link rel="stylesheet" href="../public/style/home.css">
+    <link rel="stylesheet" href="../public/style/header.css">
     <!-- Add any necessary styles here -->
     <style>
         .head{
@@ -19,20 +20,28 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">BookHive</a>
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                    <ul class="sub-menu">
-                        <li><a href="/search">Search</a></li>
-                        <li><a href="/browse">Browse</a></li>
-                    </ul>
-            </ul>
+    <div class="container2">
+        <div class="logo">BookHive</div>
+        <div class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </nav>
+        <ul class="nav-links">
+          <li><a class="home" href="/">Home</a></li>
+          
+          <li class="dropdown">
+            <a href="/search" >Search</a>
+            <li><a href="/browse">Browse</a></li>
+          </li>
+          <li class="dropdown">
+            <a href="/aboutus">About</a>
+          </li>
+        </ul>
+      </div>
+    
 
-    <h1 class="head">Sorry! No book found</h1>
+    <h1 class="head"><b style="color: red;">Sorry!</b> No book found</h1>
     <h3 >You can look some of the top Rated Books</h3>
     <div class="big_container" >
         <div class="book_50">
@@ -58,5 +67,7 @@
     <footer>
         <p>&copy; BookHive 2024 </p>
     </footer>
+
+    <script src="../public/js/header.js"></script>
 </body>
 </html>
