@@ -79,7 +79,23 @@ section .container{
     gap: 5rem;
     color: white;
     font-size: 1.3em;
+    margin: 17rem 7rem 0rem 13rem;
+}
+section .container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    color: white;
+    font-size: 1.3em;
     margin: 12rem 7rem 0rem 13rem;
+}
+section .container p{
+    font-size: 1.3em;
+}
+section .container1 p{
+    font-size: 1.3em;
 }
 section input[type="text"] {
     outline: none;
@@ -116,16 +132,51 @@ section  button[type="submit"]:hover {
     text-align: center;
     font-size: large;
 }
+.heading h1{
+    color: black;
+}
 
 .book_50 .books{
     display: flex;
     flex-wrap: wrap;
-    gap: 12rem;
+    gap: 2rem;
 
 }
 
 .book_50 .books .card img{
     width: 22vw;
     height: 70vh;
+    border-radius: 25px;
 
+}
+
+.card .card-body{
+    color: black; width: 22vw;
+}
+
+.card .card-body a{
+    color: black; text-decoration: none;
+}
+
+.card .card-body .content{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-align: -webkit-left;
+}
+.card .card-body .text-white{
+    padding-bottom: 11px;
+    font-size: 1.6em;
+}
+.card .card-body .text-white2{
+    padding-bottom: 8px;
+}
+
+.link-click{
+    text-align: end;
+margin: 2rem
+}
+
+footer{
+    background-color: #333; color: white; text-align: center; padding: 20px;
+    bottom: 0;
 }

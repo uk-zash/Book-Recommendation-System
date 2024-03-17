@@ -1,0 +1,78 @@
+
+.text-white{
+    color:black;
+}
+
+body{
+    background-color: floralwhite;
+}
+
+
+
+
+
+
+
+.head{
+    color: black;text-align: center;    padding: 3rem 0rem;
+}
+
+.container{
+    margin: 0rem 5rem;
+}
+
+.container .row .col-md-6{
+    margin-top: 50px; display: inline-block; margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.container .row .col-md-6 .card1{
+    background: lavender;
+                    width: 76vw;
+                    padding-right: 2rem;
+                    border-radius: 23px;
+}
+
+.container .row .col-md-6 .card1 .card-body{
+    display: flex; gap: 5rem;
+}
+.container .row .col-md-6 .card1 .card-body .card-img-top{
+    width: 100%; height: auto;height: 52vh; width: 20vw;
+    /* border-radius: 13px; */
+}
+
+.container .row .col-md-6 .card1 .card-body .div{
+    padding-top: 3rem; font-size: 2em;
+}
+.container .row .col-md-6 .card1 .card-body .div h3,h5{
+    padding-bottom: 1rem;    
+}
+.heads{
+    color: black; text-align: center;padding-top: 4rem;
+}
+
+.col-md-65{
+    margin:4rem 0rem;
+}
+.col-md-65 .row{
+    display: flex; flex-wrap: wrap;gap: 10rem;    display: flex;
+                    flex-wrap: wrap;
+                    gap: 4rem;
+                    justify-content: center;
+}
+
+.col-md-67 .card-body{
+    width: 22vw;
+}
+.col-md-67 .card-body a{
+    color: white; text-decoration: none;
+}
+
+.col-md-67 .card-body a img{
+    width: 21vw;
+    height: 64vh;
+}
+
+.col-md-67 .card-body a p{
+    font-size: x-large ;padding-bottom: 0.5rem;
+}

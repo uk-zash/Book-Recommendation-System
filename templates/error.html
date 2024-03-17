@@ -6,38 +6,48 @@
     <title>Error</title>
     <link rel="stylesheet" href="../public/style/home.css">
     <!-- Add any necessary styles here -->
+    <style>
+        .head{
+            text-align: center; padding: 2rem 0rem; color:black;
+        }
+        h3{
+            text-align: center; color: black;
+        }
+        body{
+            background-color: floralwhite;
+        }
+    </style>
 </head>
-<body style="background-color: #302525;">
+<body>
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">BookHive</a>
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                     <ul class="sub-menu">
-                        <li><a href="/">Search</a></li>
-                        <li><a href="#browse">Browse</a></li>
+                        <li><a href="/search">Search</a></li>
+                        <li><a href="/browse">Browse</a></li>
                     </ul>
             </ul>
         </div>
     </nav>
 
-    <h1 style="text-align: center; padding: 2rem 0rem; color: white;">Sorry! No book found</h1>
-    <h3 style="text-align: center; color: white;">You can look some of the top Rated Books</h3>
+    <h1 class="head">Sorry! No book found</h1>
+    <h3 >You can look some of the top Rated Books</h3>
     <div class="big_container" >
         <div class="book_50">
             <div class="books">
                 {% for i in range(book_name|length) %}
                 <div class="card">
-                    <div class="card-body" style="color: white; width: 22vw;">
-                        <a href="/recommend/{{ book_name[i] }}" class="book-link" style="color: white; text-decoration: none;">
+                    <div class="card-body">
+                        <a href="/recommend/{{ book_name[i] }}" class="book-link">
                         <img class="card-img-top" src="{{ image[i] }}">
-                        <div class="content" style="padding-top: 1rem;">
-                        <p class="text-white" style="    padding-bottom: 11px;
-                        font-size: xx-large;">{{ book_name[i] }}</p>
+                        <div class="content">
+                        <p class="text-white">{{ book_name[i] }}</p>
                         </a>
-                        <h4 class="text-white" style="padding-bottom: 8px;">Author: {{ author[i] }}</h4>
-                        <h4 class="text-white">Votes - {{ votes[i] }}</h4>
-                        <h4 class="text-white">Rating - {{ rating[i] }}</h4>
+                        <h4 class="text-white2">Author: {{ author[i] }}</h4>
+                        <!-- <h4 class="text-white">Votes - {{ votes[i] }}</h4> -->
+                        <h4 class="text-white3">Rating - {{ rating[i] }}</h4>
                     </div>
                     </div>
                 </div>
@@ -45,7 +55,7 @@
             </div>
         </div>
     </div>
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <footer>
         <p>&copy; BookHive 2024 </p>
     </footer>
 </body>

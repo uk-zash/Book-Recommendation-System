@@ -9,53 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../public/style/recomm.css">
 </head>
 <style>
 
-
-.text-white{
-        color:white
-    }
-  
-
-.form input[type="text"] {
-    outline: none;
-    padding: 10px; /* Adjust padding as needed */
-    border: 2px solid #ccc; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    width: 33vw; /* Input field width */
-    margin-right: 10px; /* Margin between input and button */
-  }
-
-  /* Style for button */
-.form  button[type="submit"] {
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color:#40a762; /* Button background color */
-    color: #fff; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Show pointer on hover */
-    font-size: 16px; /* Font size */
-  }
-
-  /* Change button color on hover */
-.form  button[type="submit"]:hover {
-    background-color: #c02ed2; /* Change background color */
-}
-body{
-    background-color: #271e1e;
-}
-
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('../public/image/book7.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
 
 </style>
 <body >
@@ -65,7 +22,7 @@ body{
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                     <ul class="sub-menu">
-                        <li><a href="/">Search</a></li>
+                        <li><a href="/search">Search</a></li>
                         <li><a href="/browse">Browse</a></li>
                     </ul>
             </ul>
@@ -80,41 +37,37 @@ body{
     </form> -->
 
 
-    <h1 style="color: white;text-align: center;    padding: 3rem 0rem;">Your Book</h1>
-    <div class="container" style=" margin: 0rem 5rem;
-    ">
+    <h1 class="head">Your Book</h1>
+    <div class="container"
+    >
         <div class="row";>
            
            
                 <!-- Display the first book larger -->
-                <div class="col-md-6" style="margin-top: 50px; display: inline-block; margin: auto;">
-                    <div class="card" style="background: #473939;
-                    width: 81vw;
-                    padding: 1rem;
-                    border-radius: 23px;" >
-                        <div class="card-body" style="display: flex; gap: 16rem;">
-                            <img class="card-img-top" style="width: 100%; height: auto;height: 84vh; width: 34vw;" src="{{ data[0][2] }}">
-                            <div style="padding-top: 10rem; font-size: 2em; "><h3 style="padding-bottom: 1rem;" class="text-white">Name:   {{ data[0][0] }}</h3>
-                            <h5 style="padding-bottom: 1rem;" class="text-white">Author:   {{ data[0][1] }}</h5>
-                            <h5 style="padding-bottom: 1rem;" class="text-white">Publisher:   {{ data[0][4] }}</h5>
-                            <h5 style="padding-bottom: 1rem;" class="text-white">Year-Of-Publication:   {{ data[0][3] }}</h5>
+                <div class="col-md-6">
+                    <div class="card1" >
+                        <div class="card-body">
+                            <img class="card-img-top"  src="{{ data[0][2] }}">
+                            <div class="div"><h3  class="text-white">Name:   {{ data[0][0] }}</h3>
+                            <h5  class="text-white">Author:   {{ data[0][1] }}</h5>
+                            <h5  class="text-white">Publisher:   {{ data[0][4] }}</h5>
+                            <h5  class="text-white">Year-Of-Publication:   {{ data[0][3] }}</h5>
                         </div>
                         </div>
                     </div>
                 </div>
-               
+                <div class="heads"><h1>Few Similar Books</h1></div>
                 <!-- Display other recommended similar books smaller -->
-                <div class="col-md-6" style="margin:5rem 0rem;">
-                    <div style="color: white; text-align: center;padding-bottom: 3rem;"><h1>Few Similar Books</h1></div>
-                    <div class="row" style=" display: flex; flex-wrap: wrap;gap: 10rem;">
+                <div class="col-md-65">
+                    
+                    <div class="row">
                         {% for i in data[1:] %}
-                        <div class="col-md-6">
-                            <div class="card" >
-                                <div class="card-body" style="width: 22vw;">
-                                    <a href="/recommend/{{ i[0] }}" class="book-link" style="color: white; text-decoration: none;">
-                                    <img class="card-img-top" style="width: 21vw;
-                                    height: 64vh;" src="{{ i[2] }}">
-                                   <div style="padding-top: 1rem;"> <p style="    padding-bottom: 0.5rem;" class="text-white">{{ i[0] }}</p>
+                        <div class="col-md-67">
+                            <div class="card2" >
+                                <div class="card-body">
+                                    <a href="/recommend/{{ i[0] }}" class="book-link">
+                                    <img class="card-img-top" src="{{ i[2] }}">
+                                   <div> <p class="text-white">{{ i[0] }}</p>
                                     <h4 class="text-white">{{ i[1] }}</h4>
                                     </a>
                                 </div>
@@ -133,7 +86,7 @@ body{
 
         </div>
     </div>
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <footer>
         <p>&copy; BookHive 2024 </p>
     </footer>
 </body>

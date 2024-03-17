@@ -95,6 +95,10 @@ def get_recommendations(book_name):
     recommendations = get_recommendations_for_book(book_name)
     return render_template('recommend.html', data=recommendations)
 
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('error.html',

@@ -12,7 +12,7 @@
     <style>
         section::after {
     content: "";
-    background-image: url("../public/image/book12.jpg");
+    background-image: url("../public/image/book14.jpg");
     background-size: cover;
     background-position:initial;
     width: 100%;
@@ -60,50 +60,17 @@ body{
     </nav>
 
     <section class="searching" id="search">
-        <div class="container">
+        <div class="container1">
         <p>Welcome to <b>BookHive</b>, your ultimate destination for personalized book recommendations. Let us guide you to your next literary adventure with handpicked reads tailored just for you. Start exploring today!</p>
-        <!-- <form action="/recommend_books" method="post">
+        <form action="/recommend_books" method="post">
             <input type="text" placeholder="Enter Book Name..." name="user_input"/> 
             <button type="submit">Search</button>
-        </form> -->
+        </form>
     </div>
     </section>
     
 
-    <div class="heading" id="browse">
-        <h1>Some Top Rated Books</h1>
-    </div>
-
-
-<div class="big_container" >
-    <div class="book_50">
-        <div class="books">
-            {% for i in range(book_name|length) %}
-            <div class="card">
-                <div class="card-body">
-                  <a href="/recommend/{{ book_name[i] }}" class="book-link">  <img class="card-img-top" src="{{ image[i] }}">
-                    <div class="content">
-                    <p class="text-white" >{{ book_name[i] }}</p>
-                    </a>
-                    <h4 class="text-white2">Author: {{ author[i] }}</h4>
-                    <!-- <h4 class="text-white">Votes - {{ votes[i] }}</h4> -->
-                    <h4 class="text-white3">Rating - {{ rating[i] }}</h4>
-                </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-<div
-class="link-click">
-    <a style="color:blue" href="/browse">Click For More</a>
-</div>
-    
-    <footer >
-        <p>&copy; BookHive 2024 </p>
-    </footer>
+ 
     
 </body>
 </html>
