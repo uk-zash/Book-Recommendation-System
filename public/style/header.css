@@ -84,8 +84,8 @@
 
 .container2 ul {
   display: flex;
-  gap: 0rem;
-  padding-right: 0rem;
+  gap: 5rem;
+  padding-right: 4rem;
 }
 
 .container2 ul li {
@@ -129,6 +129,8 @@
     padding-right: 0;
 
   }
+  
+
 
 
 }
@@ -142,6 +144,10 @@
   .burger-menu {
     display: block;
     padding-right: 2rem;
+  }
+  .container2 ul{
+    gap: 0rem;
+    padding-right: 0rem;
   }
 
   .container2.active ul {
