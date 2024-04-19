@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BookHive</title>
+    <link rel="stylesheet" href="../public/style/about.css">
+    <link rel="stylesheet" href="../public/style/header.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: floralwhite;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main Content Styling */
+        .container {
+            padding: 20px;
+        }
+
+        .-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 5rem;
+            padding: 4rem 2rem;
+            background: floralwhite;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .-section img {
+            max-width: 40%;
+            border-radius: 8px;
+        }
+
+        .content {
+            font-size: 1.5em;
+            max-width: 40%;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: #ff7b00;
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+        
+
+            .-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .-section img,
+            .content {
+                max-width: 100%;
+            }
+
+            .content {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container2">
+        <div class="logo">BookHive</div>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a class="home" href="/">Home</a></li>
+
+            <li class="dropdown">
+                <a href="/search">Search</a>
+            <li><a href="/browse">Browse</a></li>
+            </li>
+            <li class="dropdown">
+                <a href="/aboutus">About</a>
+            </li>
+            <li><a href="/contact">ContactUs</a></li>
+            {% if username %}
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            {% endif %}
+            
+        </ul>
+    </div>
+   
+
+    <div style="    text-align: center;
+    margin-top: 2rem;
+    font-size: 2em;
+    ">
+    
+    
+            <h2>Welcome to <span>BookHive</span></h2>
+            <p>Your go-to destination for discovering your next favorite book!</p>
+    
+        </div>
+    <div class="container">
+
+        <!-- Mission Section -->
+        <section class="-section">
+            <img src="../public/image/target.png" alt="Mission Image">
+            <div class="content">
+                <h2>Our Mission</h2>
+                <p>At <span>BookHive</span>, our mission is to make finding your next read as effortless and enjoyable
+                    as possible. We believe that everyone deserves access to personalized book recommendations tailored
+                    to their unique tastes and interests.</p>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="-section">
+            <div class="content">
+                <h2>Our Vision</h2>
+                <p>We envision a world where every reader can easily discover books that ignite their imagination,
+                    broaden their horizons, and deepen their love for literature.</p>
+            </div>
+            <img src="../public/image/vision.png" alt="Vision Image">
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="-section">
+            <img src="../public/image/team.png" alt="Team Image">
+            <div class="content">
+                <h2>Meet the Team</h2>
+                <p>Behind <span>BookHive</span> is a passionate team of book lovers dedicated to helping you find the
+                    perfect book. Get to know the faces behind the scenes who work tirelessly to make your reading
+                    experience exceptional.</p>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="-section">
+            <div class="content">
+                <h2>Our Values</h2>
+                <ul>
+                    <li><strong>Accuracy:</strong> Our recommendations are meticulously curated to ensure relevance and
+                        quality.</li>
+                    <li><strong>Diversity:</strong> We celebrate diverse voices and strive to recommend books from a
+                        wide range of genres, authors, and perspectives.</li>
+                    <li><strong>User Privacy:</strong> Your privacy is our priority. We are committed to protecting your
+                        personal information and ensuring a secure browsing experience.</li>
+                </ul>
+            </div>
+            <img src="../public/image/values.png" alt="Values Image">
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="-section">
+            <img src="../public/image/features.png" alt="Features Image">
+            <div class="content">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Personalized Recommendations: Discover books tailored to your reading preferences and interests.
+                    </li>
+                    <li>User Reviews: Read reviews from fellow readers to help you decide on your next book.</li>
+                    <li>Curated Lists: Explore curated lists of must-read books across various genres and themes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section class="-section">
+            <div class="content">
+                <h2>Feedback</h2>
+                <p>We value your feedback! Have a suggestion or idea to improve <span>BookHive</span>? We'd love to hear
+                    from you. Contact us <a href="/contact">here</a>.</p>
+            </div>
+            <img src="../public/image/feedback.png" alt="Feedback Image">
+        </section>
+
+    </div>
+
+    <script src="../public/js/header.js"></script>
+</body>
+
+</html>

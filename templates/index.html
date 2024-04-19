@@ -74,16 +74,32 @@ body{
           <div class="bar"></div>
         </div>
         <ul class="nav-links">
-          <li><a class="home" href="/">Home</a></li>
-          
-          <li class="dropdown">
-            <a href="/search" >Search</a>
-            <li><a href="/browse">Browse</a></li>
-          </li>
-          <li class="dropdown">
-            <a href="/aboutus">About</a>
-          </li>
-        </ul>
+            <li>
+                <a class="home" href="/">Home</a>
+            </li>
+            <li>
+                <a href="/search">Search</a>
+            </li>
+            <li>
+                <a href="/browse">Browse</a>
+            </li>
+            <li class="dropdown">
+                <a href="/about">About</a>
+            </li>
+            <li><a href="/contact">ContactUs</a></li>
+            {% if username %}
+            <li>
+                <a href="/logout">Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+            {% endif %}
+        </ul>        
       </div>
     
     

@@ -19,7 +19,15 @@
     text-decoration: none;
     font-size: xx-large;
 }
+.nav-links li a {
+  transition: all 0.8s ease-in-out; /* Adjust the duration for a smoother transition */
+  border-bottom: 2px solid transparent; /* Initially set border-bottom to transparent */
+}
 
+.nav-links li a:hover {
+  border-bottom: 2px solid black; /* Change border color on hover */
+  color: beige;
+}
 .dropdown-content {
   display: none; /*none*/
   position: absolute;
@@ -86,6 +94,7 @@
   display: flex;
   gap: 5rem;
   padding-right: 4rem;
+  padding-top: 6px;
 }
 
 .container2 ul li {
@@ -136,7 +145,7 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1100px) {
   .container2 ul {
     display: none;
   }
